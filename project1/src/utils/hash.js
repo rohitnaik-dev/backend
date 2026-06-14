@@ -1,16 +1,9 @@
-const bcrypt = require("bcrypt");
+import bcrypt from "bcryptjs";
 
-const hashPassword = async (password) => {
-    return await bcrypt.hash(password, 10);
-
+export const hashPassword = (password) => {
+    return bcrypt.hash(password, 10);
 };
 
-const comparePassword = async (password, hashedPassword) => {
-    return await bcrypt.compare(password, hashedPassword);
+export const comparePassword = (password, hashPassword) => {
+    return bcrypt.compare(password, hashPassword);
 };
-
-module.export = {
-    hashPassword,
-    comparePassword,
-};
-
