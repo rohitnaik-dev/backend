@@ -1,8 +1,11 @@
 {
   "name": "project1",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node --import tsx/esm src/app.js",
+    "dev": "node --watch --import tsx/esm src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -10,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
@@ -20,6 +24,7 @@
     "prisma": "^7.8.0"
   },
   "devDependencies": {
-    "@types/node": "^25.9.3"
+    "@types/node": "^25.9.3",
+    "tsx": "^4.22.4"
   }
 }
